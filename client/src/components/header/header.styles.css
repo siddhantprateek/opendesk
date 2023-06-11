@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.left {
+    cursor: pointer;
+}
+
+
+.mid-nav {
+    display: flex;
+}
+
+.mid-nav li {
+    margin: 0 2rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+.right-nav {
+    display: flex;
+}
+
+.right-nav li {
+    margin-left: 3rem;
+    list-style: none;
+    cursor: pointer;
+
+}
