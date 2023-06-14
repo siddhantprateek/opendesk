@@ -99,7 +99,9 @@ To run this project, you will need to add the following environment variables to
     go get .
     go run cmd/main.go
   ```
-  
+- ```
+  protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative service.proto
+  ```
 
 
 ## Authors

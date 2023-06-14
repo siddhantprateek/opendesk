@@ -1,5 +1,6 @@
 
 
 # Run Go server-side Application
-echo "Running Go App..."
-go run cmd/main.go 
+echo "Running Storage Service..."
+go run storage/main.go & P1=$!
+wait $P1
