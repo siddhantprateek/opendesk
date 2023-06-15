@@ -101,6 +101,8 @@ To run this project, you will need to add the following environment variables to
   ```
 - ```
   protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative service.proto
+
+  protoc --go_out=. rpc_user.proto
   ```
 
 

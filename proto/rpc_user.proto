@@ -5,5 +5,105 @@ package pb;
 option go_package = "github.com/siddhantprateek/opendesk/pb";
 
 service UserLoginService {
-    
+  rpc UserUpdate(UpdateUserRequest) returns (UpdateUserResponse) {}
+  rpc ForgetPassword(ForgetPasswordRequest) returns (ForgetPasswordResponse) {}
+  rpc GetSingleUser(GetUserRequest) returns (GetUserResponse) {}
+  rpc GetAllUsers(GetAllUserRequest) returns (GetAllUsersResponse) {}
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse) {}
+  rpc Login(UserLoginRequest) returns (UserLoginResponse) {}
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+}
+
+message CreateUserRequest {
+    string name = 1;
+    string username = 2;
+    string email = 3;
+    string password = 4;
+}
+
+message CreateUserResponse {
+    enum Status {
+        SUCCESS = 0;
+        USERNAME_EXISTS = 1;
+    }
+
+    Status status = 1;
+    string message = 2;
+}
+
+
+message UserLoginRequest {
+    string username = 1;
+    string password = 2;
+}
+
+message UserLoginResponse {
+    enum Status {
+        SUCCESS = 0;
+        INVALID_CREDENTIALS = 1;
+        ACCOUNT_LOCKED  = 2;
+    }
+
+    Status status = 1;
+    string message = 2;
+}
+
+
+
+// Get Single User
+message GetUserRequest{
+    string id = 1;
+}
+
+message GetUserResponse{
+    bool success = 1;
+    string message = 2;
+    User user = 3;
+}
+
+
+message UpdateUserRequest {
+    string id = 1;
+    string username = 2;
+    string password = 3;
+}
+
+message UpdateUserResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+message ForgetPasswordRequest {
+    string email = 1;
+}
+
+message ForgetPasswordResponse {
+    bool success = 1;
+    string message = 2;
+    string new_password = 3;
+}
+
+message GetAllUserRequest{}
+
+message GetAllUsersResponse {
+    repeated User users= 1;
+}
+
+
+message DeleteUserRequest {
+    string id = 1;
+}
+
+message DeleteUserResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+
+message User {
+    string id = 1;
+    string name = 2;
+    string username = 3;
+    string email = 4;
+    string password = 5;
 }
