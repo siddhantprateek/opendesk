@@ -1,9 +1,5 @@
 version: '3.4'
 
-networks:
-  app-network:
-    driver: bridge
-
 services:
   mongo:
     image: mongo
@@ -32,5 +28,20 @@ services:
       - 6379:6379/tcp
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+      - rabbitmq_go_net
 
-    
+networks:
+  app-network:
+    driver: bridge
+  rabbitmq_go_net:
+    driver: bridge
