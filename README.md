@@ -24,6 +24,10 @@ Moreover, Opendesk offers a platform for keeping track of worker progress and ma
 
 All things considered, Opendesk is a vital tool for any business trying to boost output, lessen stress and anxiety, and create a pleasant workplace. This software will undoubtedly grow to be a vital component of any employer's toolset because to its user-friendly layout and robust capabilities.
 
+### 🏛️ Application Architecture
+
+![](./assets/opendesk-architecture.png)
+
 ### 👌 Features / Services offered
 
 - [ ] Stress and anxiety management
