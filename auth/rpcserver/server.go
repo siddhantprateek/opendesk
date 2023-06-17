@@ -1,0 +1,5 @@
+package rpcserver
+
+func AuthRPCserver() {
+
+}
