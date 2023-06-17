@@ -4,7 +4,7 @@ package pb;
 
 option go_package = "github.com/siddhantprateek/opendesk/pb";
 
-service UserLoginService {
+service LoginSerivce {
   rpc UserUpdate(UpdateUserRequest) returns (UpdateUserResponse) {}
   rpc ForgetPassword(ForgetPasswordRequest) returns (ForgetPasswordResponse) {}
   rpc GetSingleUser(GetUserRequest) returns (GetUserResponse) {}
