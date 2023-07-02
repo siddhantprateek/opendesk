@@ -26,7 +26,7 @@ All things considered, Opendesk is a vital tool for any business trying to boost
 
 ### 🏛️ Application Architecture
 
-![](./assets/opendesk-architecture.png)
+![opendesk arch](https://github.com/siddhantprateek/opendesk/assets/43869046/2384fb97-68f1-401d-9065-74a1cf0498e3)
 
 ### 👌 Features / Services offered
 
