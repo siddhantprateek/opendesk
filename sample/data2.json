@@ -1,0 +1,81 @@
+{
+    "userId": "est officia quis",
+    "name": "incidunt voluptas ipsa",
+    "username": "Jed45",
+    "fullname": "Jean Kohler",
+    "userImg": "https://loremflickr.com/640/480/sports",
+    "email": "Annabell_Heidenreich@hotmail.com",
+    "rewardEarned": -85766169,
+    "leavesEarned": -92836640,
+    "taskCompletion": 16509182,
+    "taskPending": -23246432,
+    "taskAssigned": 24317537,
+    "priorityTask": 64893918,
+    "bookMarkedNews": [
+        {
+            "dateCreated": "proident",
+            "bookmarkedBy": "Excepteur ad incididunt mollit exercitation",
+            "newsTitle": "id eos modi",
+            "source": "Lorem Duis",
+            "newsDescription": "Qui quae possimus nihil rerum quidem occaecati non. Dignissimos rerum iste qui facilis assumenda ad incidunt. Corporis cumque optio voluptates. Ullam facere atque exercitationem aliquid occaecati saepe ratione beatae. Similique temporibus voluptatibus esse tempore quia."
+        },
+        {
+            "newsDescription": "Natus ex iure veniam. Fugiat mollitia neque. Non repellat possimus illo nam provident blanditiis sint.",
+            "newsTitle": "atque earum saepe",
+            "dateCreated": "sit voluptate veniam dolore non",
+            "bookmarkedBy": "enim Lorem occaecat",
+            "source": "adipisicing sed tempor"
+        },
+        {
+            "newsDescription": "Consequatur autem molestias molestias illo at ullam ducimus ullam provident. Quaerat quasi in est hic ipsam ullam sunt veniam eaque. Mollitia magnam quos totam. Repellat est earum perspiciatis ipsum cumque esse architecto.",
+            "bookmarkedBy": "adipisicing consectetur culpa",
+            "dateCreated": "sint",
+            "newsTitle": "illo reprehenderit illo",
+            "source": "occaecat Duis do"
+        },
+        {
+            "newsTitle": "molestias iure sapiente",
+            "newsDescription": "Explicabo quos beatae quidem maxime veniam maiores. Inventore alias praesentium nostrum. Quia atque sequi. Nihil repellendus quae sequi earum ipsa eveniet nulla rerum. Repellat rem fuga sequi odit cupiditate sint odit nesciunt. Magnam laboriosam animi mollitia quas eos.",
+            "bookmarkedBy": "in Excepteur exercitation est sunt",
+            "source": "consectetur eu",
+            "dateCreated": "cillum consequat Ut"
+        },
+        {
+            "newsDescription": "Qui consequuntur commodi corrupti architecto repudiandae qui. Sequi sint fuga molestiae provident amet assumenda excepturi perferendis. Eius corporis dolore eligendi tempora atque. Dolorum ex tempora quam blanditiis nisi labore illo rem. Quisquam minus cupiditate incidunt ipsum facilis omnis.",
+            "newsTitle": "minima nobis ea",
+            "dateCreated": "incididunt est id sit",
+            "bookmarkedBy": "nisi ex",
+            "source": "consectetur in nulla"
+        }
+    ],
+    "pendingTasks": [
+        {
+            "assignedTo": "pariatur aute fugiat ut enim",
+            "taskTitle": "nemo id soluta",
+            "taskStatus": false,
+            "taskid": "labore ullamco"
+        },
+        {
+            "taskid": "ex irure",
+            "assignedTo": "commodo",
+            "taskTitle": "ex cupiditate quas",
+            "taskStatus": true
+        }
+    ],
+    "bookMarkedQuotes": [
+        {
+            "quote": "quis ipsum laborum",
+            "bookMarkedBy": "aliqua nostrud aute dolore non",
+            "author": "Carole Bayer",
+            "slug": "et Lorem sed enim est"
+        },
+        {
+            "quote": "nulla ad esse",
+            "author": "Evan Zieme",
+            "slug": "eu",
+            "bookMarkedBy": "incididunt laborum cupidatat in"
+        }
+    ],
+    "productivityRate": 7335062,
+    "createdDate": "2023-06-17T22:41:32.404Z"
+}

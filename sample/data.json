@@ -1,0 +1,41 @@
+{
+    "userId": "1xbb671",
+    "name": "Mathew",
+    "username": "matt_rodri11",
+    "fullname": "Mathew Rodri",
+    "userImg": "http://matt.jpg",
+    "email": "mathewrodri112@gmail.com",
+    "rewardEarned": 4,
+    "leavesEarned": 5,
+    "taskCompletion": 451,
+    "taskPending": 21,
+    "taskAssigned": 21,
+    "priorityTask": 45,
+    "bookMarkedNews": [
+      {
+        "newsTitle": "News Title",
+        "source": "bbc.com/news-title",
+        "newsDescription": "News description ... Goes here.",
+        "dateCreated": "created date",
+        "bookmarkedBy": "userId"
+      }
+    ],
+    "pendingTasks": [
+      {
+        "taskid": "F21nFx",
+        "taskTitle": "Generator",
+        "taskStatus": false,
+        "assignedTo": "userId"
+      }
+    ],
+    "bookMarkedQuotes": [
+      {
+        "quote": "",
+        "author": "",
+        "slug": "",
+        "bookMarkedBy": "userId"
+      }
+    ],
+    "productivityRate": 67,
+    "createdDate": ""
+  }
