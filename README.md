@@ -58,56 +58,51 @@ To run this project, you will need to add the following environment variables to
 
 ## API Reference
 
-#### Get all items
-
-```http
-  GET /api/items
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
 
 
-## Run Locally
+## To run the project locally, follow these steps:
 
-- Clone the project
-  ```bash
-    git clone https://github.com/<user-name>/opendesk/
-  ```
-### Running Frontend
+1. Clone the project:
+   ```bash
+   git clone https://github.com/<user-name>/opendesk/
+   ```
 
-- Go to the project directory and Install client dependencies
-  ```bash
-    cd opendesk/client
-    npm install
-  ```
-- Start the client server
-  ```bash
-    npm run start 
-  ```
-### Running Backend
+2. Install client dependencies:
+   ```bash
+   cd opendesk/client
+   npm install
+   ```
 
-- Install Go from [Go.dev](https://go.dev/)
-- ```bash
-    go get .
-    go run cmd/main.go
-  ```
-- ```
-  protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative service.proto
+3. Start the client server:
+   ```bash
+   npm run start
+   ```
 
-  protoc --go_out=. --go-grpc_out=. rpc_user.proto 
-  ```
+4. Install Go:
+   Install Go by following the instructions provided on the official Go website: [Go.dev](https://go.dev/).
+
+5. Install Go dependencies:
+   ```bash
+   go get .
+   ```
+
+6. Generate necessary protocol buffer files:
+   ```bash
+   protoc --go_out=. \
+    --go_opt=paths=source_relative \
+    --go-grpc_out=. \ 
+    --go-grpc_opt=paths=source_relative \
+    name-proto-file.proto
+
+   protoc --go_out=. --go-grpc_out=. rpc_user.proto
+   ```
+
+7. Start the backend server:
+   ```bash
+   go run cmd/main.go
+   ```
+
+Make sure to provide the correct user name and follow any additional instructions mentioned in the project's documentation.
 
 
 ## Authors

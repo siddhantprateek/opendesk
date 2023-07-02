@@ -12,7 +12,7 @@ import (
 )
 
 func MongoDBdatabase() *mongo.Client {
-	client, err := mongo.NewClient(options.Client().ApplyURI(configs.EnvMongoURI()))
+	client, err := mongo.NewClient(options.Client().ApplyURI(configs.GetEnv("MONGO_URI")))
 	if err != nil {
 		log.Fatal(err)
 	}

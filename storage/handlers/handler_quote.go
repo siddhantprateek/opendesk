@@ -18,6 +18,8 @@ import (
 var QuoteCollection *mongo.Collection = connection.GetCollection(connection.DB, "quotesdata")
 
 // @desp: GET motivation quotes
+// @Route:
+// @Method:
 func GetAllQuotes(c *fiber.Ctx) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	var quotes []models.Quote
