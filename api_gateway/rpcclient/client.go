@@ -2,7 +2,6 @@ package rpcclient
 
 import (
 	"context"
-	"errors"
 
 	"github.com/siddhantprateek/opendesk/configs"
 	pb "github.com/siddhantprateek/opendesk/pb"
@@ -11,23 +10,18 @@ import (
 )
 
 var (
-	authGRPCservice = configs.GetEnv("AUTH_RPC_PORT")
-	authGRPCclient  pb.LoginSerivceClient
+	AUTH_RPC_PORT = configs.GetEnv("AUTH_RPC_PORT")
 )
 
-func GrpcAuthClient(ctx *context.Context) error {
-
-	conn, err := grpc.DialContext(*ctx, authGRPCservice, grpc.WithTransportCredentials(insecure.NewCredentials()))
+func AuthClient() (pb.LoginSerivceClient, *grpc.ClientConn, error) {
+	conn, err := grpc.DialContext(context.Background(),
+		AUTH_RPC_PORT,
+		grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
-		authGRPCclient = nil
-		return errors.New("connection to auth gRPC service failed")
+		return nil, nil, err
 	}
 
-	if authGRPCclient != nil {
-		conn.Close()
-		return nil
-	}
+	authClient := pb.NewLoginSerivceClient(conn)
 
-	authGRPCclient = pb.NewLoginSerivceClient(conn)
-	return nil
+	return authClient, conn, nil
 }
