@@ -24,6 +24,16 @@ Moreover, Opendesk offers a platform for keeping track of worker progress and ma
 
 All things considered, Opendesk is a vital tool for any business trying to boost output, lessen stress and anxiety, and create a pleasant workplace. This software will undoubtedly grow to be a vital component of any employer's toolset because to its user-friendly layout and robust capabilities.
 
+### Tech Stack
+
+- `Go`
+- `Labstack/Echo`
+- `gRPC` & `REST` 
+- `Terraform`
+- `MongoDB`
+- `Kubernetes`
+- `Docker`
+
 ### 🏛️ Application Architecture
 
 ![opendesk arch](https://github.com/siddhantprateek/opendesk/assets/43869046/2384fb97-68f1-401d-9065-74a1cf0498e3)
