@@ -6,9 +6,15 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 
+	handler "github.com/siddhantprateek/opendesk/api_gateway/handler"
 	apiMiddleware "github.com/siddhantprateek/opendesk/api_gateway/middleware"
 	"github.com/siddhantprateek/opendesk/configs"
 )
+
+func authRoutes(authr *echo.Group) {
+	authr.GET("/", handler.AuthInit)
+	authr.POST("/create", handler.CreateUser)
+}
 
 func gatewayRoutes(route *echo.Echo) {
 	route.GET("/", func(c echo.Context) error {
@@ -32,6 +38,9 @@ func Init() error {
 	app.Use(middleware.KeyAuth(apiMiddleware.KeyAuthMiddleware))
 
 	gatewayRoutes(app)
+
+	authr := app.Group("/auth")
+	authRoutes(authr)
 
 	PORT := configs.GetEnv("API_GATEWAY_PORT")
 	err := app.Start(":" + PORT)

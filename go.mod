@@ -7,6 +7,7 @@ require (
 	github.com/gofiber/fiber/v2 v2.42.0
 	github.com/joho/godotenv v1.5.1
 	github.com/labstack/echo/v4 v4.10.2
+	github.com/sirupsen/logrus v1.9.3
 	go.mongodb.org/mongo-driver v1.11.2
 	google.golang.org/grpc v1.56.0
 	google.golang.org/protobuf v1.30.0
