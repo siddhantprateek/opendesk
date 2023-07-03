@@ -2,10 +2,12 @@ package handler
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 
 	"github.com/labstack/echo/v4"
 	AuthGrpc "github.com/siddhantprateek/opendesk/api_gateway/rpcclient"
+	"golang.org/x/crypto/bcrypt"
 
 	"github.com/siddhantprateek/opendesk/pb"
 )
@@ -34,7 +36,18 @@ func CreateUser(e echo.Context) error {
 	}
 	defer conn.Close()
 
-	res, err := authClient.CreateUser(context.Background(), user)
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
+	if err != nil {
+		fmt.Println("Unable to hash the password.")
+	}
+	req := &pb.CreateUserRequest{
+		Name:     user.Name,
+		Username: user.Username,
+		Email:    user.Email,
+		Password: string(hashedPassword),
+	}
+
+	res, err := authClient.CreateUser(context.Background(), req)
 	if err != nil {
 		return e.JSON(http.StatusBadRequest, echo.Map{
 			"message": err.Error(),
